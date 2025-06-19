@@ -1,0 +1,18 @@
+Conversão de Decimal Fracionário para Binário
+Introdução
+Discutiremos a conversão de números decimais fracionários para sua representação binária. Veremos como realizar essa conversão e exploraremos o código em C que implementa essa funcionalidade.
+
+Tópicos Abordados
+1 - Representação Decimal Fracionária
+    O que é um número decimal fracionário?
+    Exemplos de números decimais fracionários.
+2 - Conversão para Binário
+    Como converter a parte inteira para binário?
+    Como converter a parte fracionária para binário?
+3 - Implementação em C
+    Visão geral do código.
+    Função decimalToBinaryFraction.
+    Exemplo de uso.
+
+Conclusão
+A conversão de números decimais fracionários para binário é essencial em áreas como ciência da computação e eletrônica. Compreender esse processo nos ajuda a compreender melhor a representação de dados em sistemas digitais.
