@@ -1,0 +1,16 @@
+#include <stdio.h>: Esta linha inclui a biblioteca padrão de entrada e saída em C, que fornece funções para entrada de dados, saída de dados e manipulação de arquivos.
+#include <math.h>: Esta linha inclui a biblioteca matemática padrão em C, que fornece funções matemáticas comuns, como potenciação.
+#include <string.h>: Esta linha inclui a biblioteca de manipulação de strings em C, que fornece funções para manipular cadeias de caracteres.
+
+Agora vamos para a função binaryToDecimal():
+
+double binaryToDecimal(char binary[], int len): Esta função recebe uma string binary contendo o número binário e seu comprimento len.
+char *point = strchr(binary, '.');: Esta linha procura o ponto decimal na string binary. Se o ponto for encontrado, point conterá um ponteiro para a posição do ponto na string. Se não for encontrado, point será NULL.
+if (point == NULL) { point = binary + len; }: Se o ponto decimal não for encontrado, o ponteiro point é movido para o final da string, indicando que a parte fracionária é zero.
+double intDecimal = 0, fracDecimal = 0, twos = 1;: Declaração de variáveis para armazenar o valor decimal da parte inteira, parte fracionária e potências de dois para a conversão.
+for (int i = point - binary - 1; i >= 0; --i) { intDecimal += (binary[i] - '0') * twos; twos *= 2; }: Este loop converte a parte inteira do número binário para decimal. Ele itera de trás para frente através da string binary, multiplicando cada dígito binário pelo valor da posição correspondente e somando os resultados à intDecimal.
+for (int i = point - binary + 1; i < len; ++i) { fracDecimal += (binary[i] - '0') / twos; twos *= 2.0; }: Este loop converte a parte fracionária do número binário para decimal. Ele itera da posição do ponto decimal até o final da string binary, dividindo cada dígito binário pelo valor da posição correspondente e somando os resultados à fracDecimal.
+return intDecimal + fracDecimal;: Retorna o valor decimal total, que é a soma da parte inteira e da parte fracionária.
+
+Conclusão:
+Este código oferece uma solução para converter um número binário fracionário para sua representação decimal, mostrando a utilização de strings em C e operações matemáticas básicas. No entanto, é importante notar que esta implementação pode não ser eficiente para números binários muito grandes, pois utiliza uma abordagem de força bruta para calcular o valor decimal.
