@@ -1,0 +1,40 @@
+Conversão de Decimal para Binário em C
+
+
+Hoje estaremos discutindo um algoritmo simples em C para converter números decimais em sua representação binária. Vamos analisar o código fornecido e entender como ele funciona.
+
+**Objetivo**:
+O objetivo deste código é aceitar um número decimal como entrada do usuário e imprimir sua representação binária.
+
+**Componentes do código**:
+1. **Função `dec2bin(int dec)`**:
+   - Essa função é responsável pela conversão de um número decimal em sua representação binária.
+   - Ela é implementada de forma recursiva.
+   - Aqui está o pseudocódigo da função:
+     ```
+     dec2bin(int dec):
+         Se dec for igual a 0:
+             Retorne
+         Senão:
+             Chamada recursiva: dec2bin(dec / 2)
+             Imprima o resto da divisão dec por 2
+     ```
+   - A função `dec2bin` divide o número decimal por 2 repetidamente até que o quociente seja zero.
+   - Durante cada chamada recursiva, o resto da divisão por 2 é impresso, o que constitui a representação binária do número decimal.
+
+2. **Função `main()`**:
+   - Essa função é a função principal do programa.
+   - Ela solicita ao usuário que insira um número inteiro.
+   - O número inserido é então passado para a função `dec2bin()` para conversão.
+   - O resultado é impresso na tela.
+
+**Como funciona**:
+- O programa começa solicitando ao usuário que insira um número inteiro.
+- O número é passado para a função `dec2bin()`.
+- Dentro da função `dec2bin()`, o número decimal é dividido por 2.
+- Se o resultado da divisão for zero, o último dígito binário é impresso.
+- Caso contrário, a função `dec2bin()` é chamada recursivamente com o quociente da divisão.
+- Durante cada chamada recursiva, o resto da divisão por 2 é impresso.
+- Os restos impressos durante as chamadas recursivas são combinados para formar a representação binária do número decimal.
+- O resultado binário é finalmente impresso na tela.
+
