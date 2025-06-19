@@ -1,0 +1,20 @@
+Definição de Constantes e Bibliotecas:
+
+As bibliotecas stdio.h, math.h e string.h são incluídas para utilização de funções de entrada e saída, funções matemáticas e funções de manipulação de strings, respectivamente.
+É definida uma constante TAM_VETOR que representa o tamanho máximo do vetor numBinario.
+Função main():
+
+Inicializa variáveis para armazenar o tamanho do número binário (tamNumBinario), o número decimal resultante (numDecimal) e o número binário em si (numBinario).
+Entrada de Dados:
+
+O programa solicita ao usuário que digite um número binário, que é armazenado na variável numBinario.
+Conversão:
+
+O programa verifica o tamanho do número binário usando a função strlen(), armazenando-o em tamNumBinario.
+Em seguida, itera sobre cada dígito do número binário (da direita para a esquerda).
+Se o dígito na posição atual for '1', o programa adiciona o valor de 2 elevado à potência correspondente à posição desse dígito ao número decimal (numDecimal).
+Saída de Resultado:
+
+Por fim, o programa imprime o valor do número na base decimal.
+Conclusão:
+Este código oferece uma solução simples para converter um número binário para sua representação decimal, mostrando a utilização de strings em C e operações matemáticas básicas. No entanto, é importante notar que esta implementação pode não ser eficiente para números binários muito grandes, pois utiliza uma abordagem de força bruta para calcular o valor decimal.
